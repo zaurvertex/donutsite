@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+body {
+background-color: #fdf5e6; /* Bej fon */
+overflow-x: hidden;
+}
+
+/* Naviqasiya Paneli */
+header {
+padding: 20px 8%;
+background: #fff;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 28px;
+font-weight: 800;
+color: #e91e63;
+font-style: italic;
+}
+
+.logo span {
+color: #f4511e;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+}
+
+nav ul li {
+margin: 0 15px;
+}
+
+nav ul li a {
+text-decoration: none;
+color: #d84315;
+font-weight: 600;
+font-size: 14px;
+}
+
+nav ul li a.active {
+color: #e91e63;
+border-bottom: 2px solid #e91e63;
+}
+
+.btn-order {
+background: #ff5722;
+color: white;
+padding: 10px 25px;
+border-radius: 25px;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* Hero Bölməsi (Əsas hissə) */
+.hero {
+display: flex;
+height: calc(100vh - 80px);
+align-items: center;
+position: relative;
+background: linear-gradient(to right, #fdf5e6 55%, #ff4081 55%, #ffab40 100%);
+}
+
+.hero-content {
+flex: 1;
+padding-left: 8%;
+z-index: 2;
+}
+
+.hero-content h1 {
+font-size: 70px;
+color: #e91e63;
+line-height: 1.1;
+font-weight: 800;
+}
+
+.hero-content h1 span {
+color: #f4511e;
+display: block;
+}
+
+.hero-content p {
+margin: 20px 0;
+font-size: 18px;
+color: #5d4037;
+}
+
+.btn-menu {
+display: inline-block;
+background: #e91e63;
+color: white;
+padding: 15px 35px;
+border-radius: 30px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+}
+
+/* Şəkil Bölməsi */
+.hero-image {
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 2;
+}
+
+.hero-image img {
+width: 80%;
+filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));
+transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+transform: scale(1.05) rotate(5deg);
+}
