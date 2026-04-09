@@ -231,3 +231,80 @@ transition: 0.3s;
 .btn-send:hover {
 background: #d81b60;
 }
+.about-container-wrapper {
+    padding: 50px 8%;
+    background-color: #fdf5e6;
+    min-height: 100vh;
+}
+
+.about-card, .vibe-card {
+    background: white;
+    border-radius: 40px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.about-content, .vibe-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.pink-label {
+    color: #e91e63;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.about-content h2, .vibe-text h3 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.highlight {
+    color: #e91e63;
+    font-family: 'Pacifico', cursive;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.feat-item {
+    background: #fdf5e6;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #d84315;
+}
+
+.about-image-box img, .vibe-img img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 30px;
+}
+
+.check-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.check-list li {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #5d4037;
+}
+
+
+.vibe-card {
+    flex-direction: row-reverse;
+}
