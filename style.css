@@ -502,3 +502,302 @@ nav ul li a:hover::after {
     box-shadow: 0 10px 20px rgba(233, 30, 99, 0.1);
     border-color: #e91e63;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdf6ef;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1a1a1a;
+    padding-top: 80px; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.logo { font-size: 24px; font-weight: 800; }
+.s-text { color: #d81b60; }
+.d-text { color: #f15a24; }
+
+.links a {
+    text-decoration: none;
+    color: #8a4b5d;
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.links a.active, .links a:hover {
+    color: #d81b60;
+}
+
+.order-now {
+    background: #f15a24;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px 100px;
+}
+
+.donut-card {
+    background: #fff;
+    border-radius: 35px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+}
+
+.img-wrapper {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 240px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.i-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: #1976d2;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-content { margin-top: 20px; }
+.card-content h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+.card-content p { color: #757575; font-size: 13px; line-height: 1.5; margin-bottom: 25px; min-height: 40px; }
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price { font-size: 18px; font-weight: 800; }
+
+.select-btn {
+    background: transparent;
+    border: 2px solid #8e1b43;
+    color: #8e1b43;
+    padding: 8px 22px;
+    border-radius: 50px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.cart-float {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+}
+
+.cart-circle {
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.cart-circle svg { width: 26px; color: #333; }
+
+.cart-count {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #ff3d00;
+    color: #fff;
+    font-size: 10px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+@media (max-width: 992px) { .grid-container { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-container { grid-template-columns: 1fr; } }
+.links a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #d81b60;
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after, .links a.active::after {
+    width: 100%;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.donut-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.donut-card:nth-child(1) { animation-delay: 0.1s; }
+.donut-card:nth-child(2) { animation-delay: 0.2s; }
+.donut-card:nth-child(3) { animation-delay: 0.3s; }
+
+.donut-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.img-wrapper img {
+    transition: transform 0.5s ease;
+}
+
+.donut-card:hover .img-wrapper img {
+    transform: scale(1.08);
+}
+
+.select-btn {
+    transition: all 0.3s ease;
+}
+
+.select-btn:hover {
+    background-color: #8e1b43;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.cart-circle {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cart-circle:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.links a {
+    text-decoration: none;
+    color: #c94f24; 
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.links a.active, 
+.links a:hover {
+    color: #e91e63; 
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #e91e63; 
+    transition: width 0.3s ease;
+}
+.order-now {
+    background: #f15a24; 
+    color: #fff;
+
+}
+.menu-header {
+    margin-top: 140px; 
+    text-align: center;
+    padding: 0 20px;
+}
+
+.search-box {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border: 2px solid #fff; 
+    border-radius: 50px; 
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+#searchInput:focus {
+    border-color: #e91e63; 
+    box-shadow: 0 15px 35px rgba(233, 30, 99, 0.15); 
+    transform: translateY(-2px); 
+}
+
+
+#searchInput::placeholder {
+    color: #a0a0a0;
+    font-weight: 500;
+}
