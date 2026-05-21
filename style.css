@@ -801,3 +801,16 @@ body {
     color: #a0a0a0;
     font-weight: 500;
 }
+.donut-3d-box {
+    display: none;
+    width: 100%;
+    height: 250px;
+    background-color: #fff5f7;
+    border-top: 2px dashed #e91e63;
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+}
+.donut-3d-box model-viewer {
+    width: 100%;
+    height: 100%;
+}
